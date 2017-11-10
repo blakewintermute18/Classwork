@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+}
+
+
+input {
+  min-width: 100px;
+}
+
+table {
+  width: 100%;
+}
+
+article {
+  margin: 1em;
+}
+
+p {
+  text-align: center;
+}
+.row {
+    padding:1em;
+}

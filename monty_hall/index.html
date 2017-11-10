@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Monty Hall</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>The Monty Hall Problem</h1>
+    </header>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <h4 class="card-title">Play Yourself</h4>
+                    <div id="doors" class="container-fluid">
+                        <div class="row justify-content-md-center">
+                            <figure onclick="chooseDoor(0)" class="col-4">
+                                <img src="closed_door.png" id="door1">
+                                <figcaption>Door #1</figcaption>
+                            </figure>
+
+                            <figure onclick="chooseDoor(1)" class="col-4">
+                                <img src="closed_door.png" id="door2">
+                                <figcaption>Door #2</figcaption>
+                            </figure>
+
+                            <figure onclick="chooseDoor(2)" class="col-4">
+                                <img src="closed_door.png" id="door3">
+                                <figcaption>Door #3</figcaption>
+                            </figure>
+
+                        </div>
+
+                    </div>
+                    <article>
+                        <input type="button" class="btn btn-primary" value="Stay" id="stay" onclick="change(false)" />
+                        <input type="button" class="btn btn-danger" value="Switch" id="switch" onclick="change(true)" /><br>
+                        <input type="button" class="btn btn-warning" value="Reset" id="reset" onclick="setUp()" />
+                    </article>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <form class="card" id="sim" onsubmit="return false">
+                    <h4 class="card-title" id="simHeader">Run Simulated Games</h4>
+                    <input type="radio" name="Choice" id="randomChoice" checked> Random Switch or Stay<br>
+                    <hr>
+                    <input type="radio" name="Choice" id="stayChoice"> Stay Every Time<br>
+                    <hr>
+                    <input type="radio" name="Choice" id="switchChoice"> Switch Every Time<br>
+                    <hr> Number of Plays:<input type="text" id="numberChoice" style="display: inline;"><br>
+                    <input type="submit" class="btn btn-info" onclick="runSim()" value="Run Simulation"><br><br>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br>
+    <div class='container'>
+        <div class="row">
+            <p class="col" id="wins">Wins: </p>
+            <p class="col" id="losses">Losses: </p>
+            <p class="col" id="ratio">Ratio: </p>
+        </div>
+    </div>
+    <div id="myTable" class="container card">
+        <table id="table">
+            <tr>
+                <th>Play #</th>
+                <th>First Door Chossen</th>
+                <th>Second Door Choosen</th>
+                <th>Door Reaveled</th>
+                <th>Switched or Stayed</th>
+                <th>Door With Car</th>
+                <th>Result</th>
+            </tr>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+#button {
+    height: 50px;
+    width: 100px;
+    border: solid #7F7E78;
+    background-color: #E5E3D9;
+    padding: 1em;
+    font-size: 225%;
+    text-shadow: 2px 2px red;
+    box-shadow: 2px 2px blue;
+    user-select: none;
+    linear-gradient 
+}
+
+#button:hover {
+    box-shadow: 5px 5px blue;
+}
+
+#button:active {
+    background-color: #BDB9B8;
+}

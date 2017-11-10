@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+}
+
+#sim {
+    text-align: left;
+}
+
+input {
+  min-width: 100px;
+}
+
+#table {
+  width: 100%;
+}
+
+article {
+  margin: 1em;
+}
+
+p {
+  text-align: center;
+}
+
+.card {
+    padding:1em !important;
+    height: 100%;
+}
+
+header {
+    min-height: 5rem;
+    border-bottom: solid 5px #5DC5D4;
+    padding: 2em;
+    padding-left: 5em;
+    text-align: left;
+
+}
+section {
+    margin: 1.5em;
+}
+
+#simHeader {
+     text-align: center;
+}
