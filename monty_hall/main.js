@@ -177,7 +177,6 @@ function updateTable() {
     winsBox.textContent = "Wins: " + recordData[6];
     lossBox.textContent = "Losses: " + recordData[7];
     ratioBox.textContent = "Ratio: " + Math.round(recordData[6] * 100 / (recordData[6] + recordData[7])) + "%";
-document.getElementById("table").getElementsByTagName("tr").length > 102
 }
 
 setUp()
