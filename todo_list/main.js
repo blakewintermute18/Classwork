@@ -18,7 +18,7 @@ $(document).ready(function() {
     function saveChanges() {
         console.log("Hello")
         modText = $('#modifyInput').val();
-        $(buttonEditing).parent().parent().find('p').text(modText)
+        $(buttonEditing).parent().parent().find('p').text(modText);
     }
 
     //adds an event listener to the button

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>TO_DO.js</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/0d447d395f.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+
+    <script src="main2.js"></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <header>
+        <h1>TO-DO!</h1>
+    </header>
+
+    <div class='container'>
+        <div class='row'>
+            <div class='col-sm-4'>
+                <div class="form-group">
+                    <label for="taskAdd">Add Task:</label>
+                    <textarea type="text" class="form-control" rows="1" id="taskAdd" placeholder="Do Laundry..."></textarea>
+                    <select id="sectionTypes">
+                        <option value="home">Home</option>
+                        <option value="school">School</option>
+                    </select>
+                    <button id="createTask" type="button" class="btn btn-primary controlButton">Add Task</button>
+                </div>
+            </div>
+
+            <div class='col-sm-4'>
+                <div class="form-group">
+                    <label for="catAdd">Add Catagory:</label>
+                    <textarea type="text" class="form-control" rows="1" id="catAdd" placeholder="Grocery, etc..."></textarea>
+                    <button id="addCatag" type="button" class="btn btn-warning">Add Catagory</button>
+                </div>
+            </div>
+
+            <div class='col-sm-4'>
+                <label>Meta Data</label><br>
+                <p id="data">
+                    Total: 0 Done: 0<br>Stared: 0 Both: 0
+                </p>
+                <button id="getData" type="button" class="btn btn-info">Get Meta Data</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <div class='container'>
+        <div class="row" id=sections>
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-body" id="home">
+                  <div class="catButtons">
+                      <button type="button" class="btn btn-danger catDelete">Delete</button>
+                  </div>
+                  <h2>Home</h2>
+                  <hr>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-body" id="school">
+                  <div class="catButtons">
+                      <button type="button" class="btn btn-danger catDelete">Delete</button>
+                  </div>
+                  <h2>School</h2>
+                  <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Change this now!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <textarea type="text" class="form-control" rows="4" id="modifyInput"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveChanges">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

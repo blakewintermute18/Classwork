@@ -1,0 +1,66 @@
+textarea {
+    margin-top: .5em;
+    margin-bottom: 1em;
+}
+
+h1 {
+    padding:1rem;
+}
+
+.card {
+    margin-bottom: 2em;
+}
+.catButtons {
+    float: right;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+}
+
+article {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 0em !important;
+    margin-top: 1em;
+    max-height:80px;
+}
+article div {
+    height: 100%;
+
+}
+article div button {
+    min-width: 100px;
+}
+.buttonDiv {
+    padding-right: 0px;
+    max-width: 115px;
+    height: 80px
+
+}
+.deleteButton {
+    border-radius: 4px 0px 0px 0px;
+    height: 50%;
+}
+.modifyButton {
+    border-radius: 0px 0px 0px 4px;
+    height: 50%;
+}
+.star-button {
+    text-align: center;
+    color: gold;
+    font-size: 45px;
+    max-width: 80px;
+    min-width: 80px;
+    height: 80px;
+    border-right: 1px solid lightgrey;
+}
+.star-button:hover {
+    font-size: 47px;
+}
+.mainPara {
+    text-align: left;
+    width: 100%;
+    padding: 25px 30px 11px 1em;
+}
